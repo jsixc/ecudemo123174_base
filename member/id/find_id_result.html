@@ -1,0 +1,41 @@
+<!--@layout(/layout/basic/layout.html)-->
+<hr class="template_set" data-template="template-" data-pg="member_" data-pg-class="pg_find_id_result">
+
+<div class="path">
+	<span>현재 위치</span>
+	<ol>
+		<li><a href="/">홈</a></li>
+		<li title="현재 위치"><strong>아이디 찾기</strong></li>
+	</ol>
+</div>
+
+<div class="titleArea">
+	<h2>아이디 찾기</h2>
+</div>
+
+<div module="member_findidresult" class="ec-base-box typeThin">
+	<!--@css(/css/module/member/find_id_result.css)-->
+	<div class="findId">
+		<h3>아이디 찾기</h3>
+		<p class="info">고객님 아이디 찾기가 완료 되었습니다.</p>
+		<div class="ec-base-box typeMember gMessage">
+			<p class="message">저희 쇼핑몰를 이용해주셔서 감사합니다.<br />다음정보로 가입된 아이디가 총 <span class="txtEm">{$idCnt}</span>개 있습니다.</p>
+			<div class="information">
+				<p class="thumbnail"><img src="//img.echosting.cafe24.com/skin/base/member/img_member_default.gif" alt="" /></p>
+				<div class="description">
+					<ul class="ec-base-desc gSmall">
+						<li><strong class="term">이름</strong><strong class="desc"> : {$name}</strong></li>
+						<li><strong class="term">{$searchType}</strong><span class="desc"> : {$searchInfo}</span></li>
+						<li>{$searchIds}</li>
+						<li>고객님 즐거운 쇼핑 하세요!</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<p class="copy">고객님의 아이디 찾기가 성공적으로 이루어졌습니다. <br />항상 고객님의 즐겁고 편리한 쇼핑을 위해 최선의 노력을 다하는 쇼핑몰이 되도록 하겠습니다.</p>
+		<p class="ec-base-button btn_set">
+			<a href="javascript:go_findlogin('{$id}');" class="abtn_ fill point">로그인</a>
+			<a href="javascript:go_findpwd('{$id}','{$mtype}');" class="abtn_ basic">비밀번호 찾기</a>
+		</p>
+	</div>
+</div>

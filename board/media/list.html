@@ -1,0 +1,84 @@
+<!--@layout(/layout/basic/layout.html)-->
+<div module="Board_ListPackage_1002">
+	<!--@css(/css/module/board/listPackage.css)-->
+	<div module="board_title_1002">
+		<div class="path">
+			<span>현재 위치</span>
+			<ol>
+				<li><a href="/">홈</a></li>
+				<li><a href="/board/index.html">게시판</a></li>
+				<li title="현재 위치"><strong>{$board_name}</strong></li>
+			</ol>
+		</div>
+
+		<div class="titleArea">
+			<h2>{$board_title} {$board_adult_icon}</h2>
+			<p>{$board_info}</p>
+		</div>
+		<div class="imgArea {$board_top_image|strconv:visible}">{$board_top_image}</div>
+	</div>
+
+	<div class="boardSort">
+		<span module="board_category_1002">{$form.board_category}</span>
+		<span module="board_ReplySort_1002">{$reply_sort}</span>
+	</div>
+
+	<!--@import(/_jxc/include/board_list_gallery.html)-->
+	<script type="text/javascript">
+		$jXC(document).ready(function(){
+			if($jXC('body').hasClass('board_type_gallery')){
+				console.log('board_type_gallery');
+				$jXC('#include').load('/_jxc/include/board_list_gallery.html?board_no=2'); 
+			}
+		});
+	</script>
+
+	<div id="include"></div>
+
+	<div module="board_ButtonList_1002" class="ec-base-button typeBG {$write_display|display}">
+		<span class="gRight btn_set">
+			<a href="/board/media/write.html{$param_write}" class="{$write_display|display} abtn_ fill gray3">글쓰기</a>
+		</span>
+	</div>
+</div>
+
+<div module="board_paging_1002" class="ec-base-paginate">
+	<a href="{$param_prev}"><img src="//img.echosting.cafe24.com/skin/base/common/btn_page_prev.gif" alt="이전 페이지" /></a>
+	<ol>
+		<li><a href="{$param_num}" class="{$param_class}">{$page_num}</a></li>
+		<li><a href="{$param_num}" class="{$param_class}">{$page_num}</a></li>
+	</ol>
+	<a href="{$param_next}"><img src="//img.echosting.cafe24.com/skin/base/common/btn_page_next.gif" alt="다음 페이지" /></a>
+</div>
+
+<div module="board_search_1002">
+	<!--@css(/css/module/board/search.css)-->
+	<fieldset class="boardSearch">
+		<legend>게시물 검색</legend>
+		<p>{$form.search_date} {$form.search_key} {$form.search} <a href="#none" class="btnEmFix" onclick="{$action_search}">찾기</a></p>
+	</fieldset>
+</div>
+
+<!-- 관리자 전용 메뉴 -->
+<div module="board_catemove_1002">
+	<!--@css(/css/module/board/catemove.css)-->
+	<p>
+		{$board_catemove_selectbox}
+		<span class="btn_set">
+			<a href="#none" onclick="{$action_category_move}" class="abtn_ basic xsmall">{$category_move}</a>
+		</span>
+	</p>
+</div>
+
+<div module="board_function_1002">
+	<!--@css(/css/module/board/function.css)-->
+	<p>
+		{$board_function_selectbox}
+		<span class="btn_set">
+			<a href="#none" onclick="{$action_article_move}" class="abtn_ basic xsmall">{$article_move}</a>
+			<a href="#none" onclick="{$action_article_copy}" class="abtn_ basic xsmall">{$article_copy}</a>
+		</span>
+		{$board_function_help}
+	</p>
+</div>
+<!-- // 관리자 전용 메뉴 -->

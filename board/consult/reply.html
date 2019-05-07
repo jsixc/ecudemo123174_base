@@ -1,0 +1,94 @@
+<!--@layout(/layout/basic/layout.html)-->
+<div module="board_ReplyPackage_9">
+	<!--@css(/css/module/board/replyPackage_9.css)-->
+	<div module="board_title_9">
+		<div class="path">
+			<span>현재 위치</span>
+			<ol>
+				<li><a href="/">홈</a></li>
+				<li><a href="/myshop/index.html">마이쇼핑</a></li>
+				<li title="현재 위치"><strong>{$board_name}</strong></li>
+			</ol>
+		</div>
+
+		<div class="titleArea">
+			<h2>{$board_title}</h2>
+			<p>{$board_info}</p>
+		</div>
+	</div>
+
+	<div module="Board_Read_9">
+		<!--
+		$login_page_url = /member/login.html
+		//-->
+		<div class="ec-base-table gLayoutFixed">
+			<div class="head">
+				<h2>{$subject}</h2>
+				<div class="info">
+					<div class="write">{$writer}</div>
+					<ul>
+						<li class="ip {$config.display_ip|display}">
+							<strong class="th">IP</strong> <span class="td">{$ip}</span>
+						</li>
+						<li class="date {$config.use_date|display}">
+							<strong class="th">DATE</strong> <span class="td">{$write_date|date:Y.m.d}</span>
+						</li>
+						<li class="hit {$config.use_cnt|display}">
+							<strong class="th">COMMENT</strong> <span class="td">{$consult}</span>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<table border="1" summary="">
+				<caption>1:1 맞춤상담 상세</caption>
+				<colgroup>
+					<col style="width:130px;" />
+					<col style="width:auto;" />
+					<col style="width:130px;" />
+					<col style="width:auto;" />
+				</colgroup>
+				<tbody>
+					<tr class="view">
+						<td colspan="4">
+							<div class="detail">{$content}</div>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+
+	<div module="board_reply_9">
+		<!--
+		$reply_success_url = /board/consult/list.html
+		$deny_access_url = /board/consult/list.html
+		//-->
+		<div class="ec-base-table typeWrite">
+			<table border="1" summary="">
+				<caption>1:1 맞춤상담 답변쓰기 폼</caption>
+
+				<tbody>
+					<tr class="blind">
+						<th scope="col">답변 입력</th>
+					</tr>
+					<tr>
+						<td class="clear">
+							{$form.content}
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+		<div class="ec-base-button">
+			<span class="gLeft btn_set">
+				<span class="{$config.is_admin|display}"><a href="#none" class="abtn_ basic xsmall" onclick="{$action_comment_admin}">관리자 답변보기</a></span>
+				<a href="{$link_board_list}" class="abtn_ basic xsmall">목록</a>
+			</span>
+			<span class="gRight btn_set">
+				<a href="{$link_board_list}" class="abtn_ basic">취소</a>
+				<a href="#none" onclick="{$action_reply}" class="abtn_ fill gray3">등록</a>
+			</span>
+		</div>
+	</div>
+</div>

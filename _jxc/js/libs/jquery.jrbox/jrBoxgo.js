@@ -1,0 +1,1 @@
+   var gallery = new jBox();

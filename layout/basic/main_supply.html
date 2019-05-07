@@ -1,0 +1,158 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "//www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="//www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+	<!-- PG크로스브라우징필수내용 -->
+	<meta http-equiv="Cache-Control" content="no-cache" />
+	<meta http-equiv="Expires" content="0" />
+	<meta http-equiv="Pragma" content="no-cache" />
+	<!-- // PG크로스브라우징필수내용 -->
+
+	<title>기본 레이아웃</title>
+	<!--@css(/layout/basic/css/common.css)--><!-- 해당 CSS는 쇼핑몰 전체 페이지에 영향을 줍니다. 삭제와 수정에 주의해주세요. -->
+	<!--@css(/layout/basic/css/layout.css)-->
+	<!--@css(/layout/basic/css/ec-base-ui.css)-->
+	<!--@css(/layout/basic/css/ec-base-tooltip.css)-->
+	<!--@css(/layout/basic/css/ec-base-product.css)-->
+	<!--@css(/layout/basic/css/ec-base-paginate.css)-->
+	<!--@css(/layout/basic/css/ec-base-tab.css)-->
+	<!--@css(/layout/basic/css/ec-base-table.css)-->
+
+	<!-- 스마트디자인에서는 JQuery 1.4.4 버전이 내장되어있습니다. 추가로 호출하면 충돌이 생길 수 있습니다. -->
+	<!--@js(/layout/basic/js/basic.js)-->
+	<!--@js(/js/common.js)-->
+	<!--@js(/js/module/layout/quick_view.js)-->
+
+	<!-- jxc:CSS -->
+	<link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300,400,500,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.2.0/aos.css" />
+	<!--@css(/_jxc/css/custom.css)-->
+	<!--@css(/_jxc/css/commx.css)-->
+
+	<!-- jxc:JS -->
+	<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+	<script type="text/javascript">
+		window.$jXC = jQuery.noConflict(true);
+	</script>
+	<!--@js(/_jxc/js/libs/jquery.cookie/jquery.cookie.min.js)-->
+	<!--@js(/_jxc/js/libs/jquery.mousewheel/jquery.mousewheel.min.js)-->
+	<!--@js(/_jxc/js/libs/jquery.flipclock/flipclock.min.js)-->
+	<!--@js(/_jxc/js/libs/jquery.easing/jquery.easing.min.js)-->
+	<!--@js(/_jxc/js/libs/jquery.superscrollorama/jquery.superscrollorama.min.js)-->
+	<!--@js(/_jxc/js/libs/jquery.greensock/TweenMax.min.js)-->
+	<!--@js(/_jxc/js/libs/jquery.cycle2/jquery.cycle2.min.js)-->
+	<!--@js(/_jxc/js/libs/jquery.cycle2/jquery.cycle2.carousel.min.js)-->
+	<!--@js(/_jxc/js/libs/jquery.malihuscrollbar/jquery.mCustomScrollbar.min.js)-->
+	<!--@js(/_jxc/js/libs/jquery.tabcontent/tabcontent.js)-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.2.0/aos.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/instafeed.js/1.4.1/instafeed.min.js"></script>
+	<!--@js(/_jxc/js/commx.js)-->
+
+</head>
+
+<body id="main">
+	<!-- Preloader -->
+	<div id="preloader"></div>
+	<!-- // Preloader:END -->
+	<!-- Skip -->
+	<!--@import(/_jxc/include/skip.html)-->
+	<!-- // Skip:END -->
+	<!-- Top Banner -->
+	<div id="topBanner">
+		<div class="inwrap">
+			<div class="viewport bannermanage" data-max-itme="1" module="bannermanage2_display_1">
+				<div class="item">
+					<div class="thumb"><a href="{$href}" alt="{$title}" {$target} >{$banner}</a></div>
+				</div>
+				<div class="item">
+					<div class="thumb"><a href="{$href}" alt="{$title}" {$target} >{$banner}</a></div>
+				</div>
+				<div class="item">
+					<div class="thumb"><a href="{$href}" alt="{$title}" {$target} >{$banner}</a></div>
+				</div>
+			</div>
+		</div>
+		<button type="button" class="close"><span class="sp_ btn">close</span></button>
+	</div>
+	<!-- // Top Banner:END -->
+
+	<!-- Root -->
+	<div id="root">
+		<!-- Header -->
+		<div id="header">
+			<!--@import(/_jxc/include/header.html)-->
+		</div><hr class="layout" />
+		<!-- // Header:END -->
+
+		<!-- Container -->
+		<div id="container">
+			<div id="contents">
+				<!--@contents-->
+			</div><hr class="layout" />
+		</div><hr class="layout" />
+		<!-- // Container:END -->
+
+		<!-- Footer -->
+		<div id="footer">
+			<!--@import(/_jxc/include/footer.html)-->
+		</div><hr class="layout" />
+		<!-- // Footer:END -->
+	</div><hr class="layout" />
+	<!-- // Root:END -->
+
+	<!-- 결제를 위한 필수 영역 -->
+	<div id="progressPaybar" style="display:none;">
+		<div id="progressPaybarBackground" class="layerProgress"></div>
+		<div id="progressPaybarView">
+			<div class="box">
+				<p class="graph">
+					<span><img src="//img.echosting.cafe24.com/skin/base_ko_KR/layout/txt_progress.gif" alt="현재 결제가 진행중입니다." /></span>
+					<span><img src="//img.echosting.cafe24.com/skin/base/layout/img_loading.gif" alt="" /></span>
+				</p>
+				<p class="txt">
+					본 결제 창은 결제완료 후 자동으로 닫히며,결제 진행 중에 본 결제 창을 닫으시면<br />
+					주문이 되지 않으니 결제 완료 될 때 까지 닫지 마시기 바랍니다.
+				</p>
+			</div>
+		</div>
+	</div>
+	<!-- // 결제를 위한 필수 영역 -->
+
+	<div module="Layout_multishopShipping">
+		<!--@css(/css/module/layout/multishopShipping.css)-->
+		<!--@js(/js/module/layout/multishopShipping.js)-->
+		<div class="dimmed"></div>
+		<div class="worldshipLayer">
+			<h2>WORLD SHIPPING</h2>
+			<div class="content">
+				<p class="desc">PLEASE SELECT THE DESTINATION COUNTRY AND LANGUAGE :</p>
+				<div class="select">
+					<select module="Layout_multishopShippingCountrylist">
+						<option value="{$country_code}"{$country_default_selected}>SHIPPING TO : {$country_name}</option>
+						<option value="{$country_code}"{$country_default_selected}>SHIPPING TO : {$country_name}</option>
+					</select>
+				</div>
+				<div class="select">
+					<select module="Layout_multishopShippingLanguagelist">
+						<option value="{$shop_domain}"{$shop_default_selected}>LANGUAGE : {$shop_language_name}</option>
+						<option value="{$shop_domain}"{$shop_default_selected}>LANGUAGE : {$shop_language_name}</option>
+					</select>
+				</div>
+			</div>
+			<div class="btnArea">
+				<a href="#none"><img src="//img.echosting.cafe24.com/skin/base_ko_KR/link/btn_go.gif" alt="GO" /></a>
+			</div>
+			<a href="#none" class="btnClose"><img src="//img.echosting.cafe24.com/skin/base/common/btn_close.gif" width="13" height="13" alt="close" /></a>
+		</div>
+	</div>
+
+	<div module="Layout_conversionPc">
+		<!--@css(/css/module/layout/conversionpc.css)-->
+		<a href="{$mobile_url}">모바일 화면보기</a>
+	</div>
+</body>
+</html>

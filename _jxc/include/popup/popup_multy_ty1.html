@@ -1,0 +1,140 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "//www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="//www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<style>
+		body{margin:0px}
+		p{margin:0px}
+		.multy_popup{background:white}
+		/*.multy_popup .arrows .direction{position:absolute;top:50%;width:40px;height:40px;margin-top:-20px;background:rgba(255, 255, 255, 0.7);text-align:center}
+		.multy_popup .arrows .direction .sp_{width:10px;height:18px;margin-top:11px}
+		.multy_popup .arrows .prve{left:-40px}
+		.multy_popup .arrows .prve .arrow{background-position:0 -20px}
+		.multy_popup .display_slide:hover .arrows .prve{left:0;
+			-webkit-transition:.3s ease;
+			-moz-transition:.3s ease;
+			-ms-transition:.3s ease;
+			-o-transition:.3s ease;
+			transition:.3s ease
+		}
+		.multy_popup .arrows .next{right:-40px}
+		.multy_popup .arrows .next .arrow{background-position:-20px -20px}
+		.multy_popup .display_slide:hover .arrows .next{right:0;
+			-webkit-transition:.3s ease;
+			-moz-transition:.3s ease;
+			-ms-transition:.3s ease;
+			-o-transition:.3s ease;
+			transition:.3s ease
+		}*/
+		.multy_popup .pager{font-size:0}
+		.multy_popup .pager>div{display:inline-block;position:relative;z-index:0;width:101px;margin: 0 0 -1px -1px}
+		.multy_popup .pager>div p{display:table;width:99px;height:80px;border:1px solid #ddd;background:#fafafa;color:#999;font-size:11px;text-align:center;cursor:pointer;
+			-webkit-transition: all .25s ease;
+			-moz-transition: all .25s ease;
+			-ms-transition: all .25s ease;
+			-o-transition: all .25s ease;
+			transition: all .25s ease
+		}
+		.multy_popup .pager>div p a{display:table-cell;vertical-align:middle;color:#7b7b7b;text-decoration:none}
+		.multy_popup .pager>div:hover p{background:white}
+		.multy_popup .pager>div.cycle-pager-active{z-index:1}
+		.multy_popup .pager>div.cycle-pager-active p{border-color:black;background:black}
+		.multy_popup .pager>div.cycle-pager-active p a{color:white}
+        .xans-popup-footer{position:fixed;bottom:0;width:100% !important}
+		.xans-popup-footer>div{overflow:hidden !important;width:100% !important;height:30px !important;padding:0 !important;background:#555 !important}
+		.xans-popup-footer>div span:first-child{display:inline-block;position:relative;float:left;line-height:30px;padding:0 0 0 7px;text-indent:20px;font-size:11px;color:#eee}
+		.xans-popup-footer>div span:first-child>input{position:absolute;left:0;top:0;width:17px;height:17px;line-height:30px;margin:6px 0 0 8px}
+		.xans-popup-footer #popup_close_btn{display:inline-block;position:relative;float:right;width:30px;line-height:30px;padding:0;font-size:0;color:#fff}
+		.xans-popup-footer #popup_close_btn:after{content:'';position:absolute;top:0;left:0;width:11px;height:11px;margin:9px 0 0 9px;background:url(/_jxc/imgz/comm/sp_btn.png) no-repeat 0 -90px}
+		.xans-popup-footer #popup_close_btn:hover{background: #000 !important;color:#fff}
+
+		/**/
+		.multy_popup.ty1{width:300px;height:380px}
+	</style>
+	<title>팝업테스트</title>
+	<!--@css(/_jxc/css/laypop.css)-->
+
+	<!-- jxc:CSS -->
+	<link href="https://fonts.googleapis.com/css?family=Lato:400,300,700" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet" type="text/css">
+	<!--@css(/_jxc/css/commx.css)-->
+
+	<!-- jxc:JS -->
+	<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+	<script type="text/javascript">
+		window.$jXC = jQuery.noConflict(true);
+	</script>
+	<!--@js(/_jxc/js/libs/jquery.easing/jquery.easing.min.js)-->
+	<!--@js(/_jxc/js/libs/jquery.superscrollorama/jquery.superscrollorama.min.js)-->
+	<!--@js(/_jxc/js/libs/jquery.greensock/TweenMax.min.js)-->
+	<!--@js(/_jxc/js/libs/jquery.cycle2/jquery.cycle2.min.js)-->
+	<!--@js(/_jxc/js/libs/jquery.cycle2/jquery.cycle2.carousel.min.js)-->
+	<!--@js(/_jxc/js/libs/jquery.tabcontent/tabcontent.js)-->
+	<!--@js(/_jxc/js/commx.js)-->
+
+	<!--
+	• 배너 300x380픽셀
+	• 타겟설정
+	  현재창으로 열기 - target="_parent"
+             새창으로 열기 - target="_blank"
+             // -->
+         </head>
+         <body>
+         	<div class="multy_popup ty1">
+         		<div class="head blind">
+         			<h1>멀티팝업</h1>
+         		</div>
+         		<div class="body">
+         			<div class="display_slide">
+         				<div class="seen" data-cycle-pager="#pagerMultyPopupTy1">
+         					<div class="item">
+         						<a href="/shop.html" target="_parent"><span class="thumb"><img src="/_jxc/imgz/popup/multy_ty1_img1.jpg" alt="" /></span></a>
+         					</div>
+         					<div class="item">
+         						<a href="/shop.html" target="_parent"><span class="thumb"><img src="/_jxc/imgz/popup/multy_ty1_img2.jpg" alt="" /></span></a>
+         					</div>
+         					<div class="item">
+         						<a href="/shop.html" target="_parent"><span class="thumb"><img src="/_jxc/imgz/popup/multy_ty1_img3.jpg" alt="" /></span></a>
+         					</div>
+         					<div class="item">
+         						<a href="/shop.html" target="_parent"><span class="thumb"><img src="/_jxc/imgz/popup/multy_ty1_img4.jpg" alt="" /></span></a>
+         					</div>
+         					<div class="item">
+         						<a href="/shop.html" target="_parent"><span class="thumb"><img src="/_jxc/imgz/popup/multy_ty1_img5.jpg" alt="" /></span></a>
+         					</div>
+         					<div class="item">
+         						<a href="/shop.html" target="_parent"><span class="thumb"><img src="/_jxc/imgz/popup/multy_ty1_img6.jpg" alt="" /></span></a>
+         					</div>
+         				</div>
+             			<!--
+             			<div class="arrows">
+             				<a href="#" id="prevMultyPopupTy1" class="direction prve"><span class="sp_ arrow">prev</span></a>
+             				<a href="#" id="nextMultyPopupTy1" class="direction next"><span class="sp_ arrow">next</span></a>
+             			</div>
+             			// -->
+             		</div>
+             		<div id="pagerMultyPopupTy1" class="pager">
+             			<div>
+             				<p><a href="#none">멀티팝업<br>타입1</a></p>
+             			</div>
+             			<div>
+             				<p><a href="#none">멀티팝업<br>타입1</a></p>
+             			</div>
+             			<div>
+             				<p><a href="#none">멀티팝업<br>타입1</a></p>
+             			</div>
+             			<div>
+             				<p><a href="#none">멀티팝업<br>타입1</a></p>
+             			</div>
+             			<div>
+             				<p><a href="#none">멀티팝업<br>타입1</a></p>
+             			</div>
+             			<div>
+             				<p><a href="#none">멀티팝업<br>타입1</a></p>
+             			</div>
+             		</div>
+             	</div>
+             </div>
+             <div module="Popup_Footer">{$footer}</div>
+         </body>
+         </html>

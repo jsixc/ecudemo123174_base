@@ -1,0 +1,89 @@
+<div class="fixed">
+	<div class="inwrap initial_point transition- ease">
+
+		<!-- Logo -->
+		<h1 module="Layout_LogoTop" class="transition- ease">
+			<a href="/index.html"><img src="/_jxc/imgx/commx/hder-h1-logo.png" alt="{$mall_name}"></a>
+		</h1>
+		<!-- // Logo:END -->
+
+		<!-- Util -->
+		<div class="util" class="transition- ease">
+			<ul class="ty_ inline_block" module="Layout_statelogoff">
+				<li><a href="/myshop/index.html">MYPAGE</a></li>
+				<li><a href="/member/login.html" class="log">LOGIN</a></li>
+				<li><a href="/member/join.html">JOIN</a></li>
+				<li><a href="/myshop/order/list.html">ORDER</a></li>
+				<li class="cart"><a href="/order/basket.html">CART <span class="count {$basket_count_display|display} {$basket_count_display_class}"><span class="{$basket_count_class}">{$basket_count}</span></span></a></li>
+			</ul>
+			<ul class="ty_ inline_block" module="Layout_stateLogon">
+				<li><a href="/myshop/index.html">MYPAGE</a></li>
+				<li><a href="{$action_logout}" class="log">LOGOUT</a></li>
+				<li><a href="/myshop/order/list.html">ORDER</a></li>
+				<li class="cart"><a href="/order/basket.html">CART <span class="count {$basket_count_display|display} {$basket_count_display_class}"><span class="{$basket_count_class}">{$basket_count}</span></span></a></li>
+			</ul>
+		</div>
+		<!-- // Util:END -->
+
+		<!-- GNB -->
+		<div id="gnb" class="gnb transition- ease">
+			<ul class="menu_ ty_ inline_block">
+				<li class="level1"><a href="/brandAbout.html">Brand</a>
+					<div class="level2">
+						<ul>
+							<li><a href="/brandAbout.html">About us</a></li>
+							<li><a href="/brandLaboratory.html">Laboratory</a></li>
+						</ul>
+					</div>
+				</li>
+				<li class="level1"><a href="/product/list.html?cate_no=24">Shop</a>
+					<div module="Layout_category" class="level2">
+						<ul>
+							<li><a href="/product/list.html{$param}">{$name_or_img_tag}</a></li>
+							<li><a href="/product/list.html{$param}">{$name_or_img_tag}</a></li>
+							<li><a href="/product/list.html{$param}">{$name_or_img_tag}</a></li>
+							<li><a href="/product/list.html{$param}">{$name_or_img_tag}</a></li>
+							<li><a href="/product/list.html{$param}">{$name_or_img_tag}</a></li>
+							<li><a href="/product/list.html{$param}">{$name_or_img_tag}</a></li>
+							<li><a href="/product/list.html{$param}">{$name_or_img_tag}</a></li>
+						</ul>
+						<ul class="disnone">
+							<li><a href="/lookbook.html{$param}">{$name_or_img_tag}</a></li>
+							<li><a href="/lookbook.html{$param}">{$name_or_img_tag}</a></li>
+							<li><a href="/lookbook.html{$param}">{$name_or_img_tag}</a></li>
+							<li><a href="/lookbook.html{$param}">{$name_or_img_tag}</a></li>
+						</ul>
+					</div>
+				</li>
+				<li class="level1"><a href="/board/event/list.html?board_no=2&category_no=1">Event</a>
+					<div class="level2">
+						<ul>
+							<li><a href="/board/event/list.html?board_no=2&category_no=1">진행중 이벤트</a></li>
+							<li><a href="/board/event/list.html?board_no=2&category_no=2">종료된 이벤트</a></li>
+						</ul>
+					</div>
+				</li>
+				<li class="level1"><a href="/board/notice/list.html?board_no=1">Press</a>
+					<div class="level2">
+						<ul>
+							<li><a href="/board/notice/list.html?board_no=1">Notice</a></li>
+							<li><a href="/board/media/list.html?board_no=5">Media</a></li>
+						</ul>
+					</div>
+				</li>
+				<li class="level1"><a href="/board/free/list.html?board_no=3">Community</a>
+					<div class="level2">
+						<ul>
+							<li><a href="/board/product/list.html?board_no=4">Review</a></li>
+							<li><a href="/board/free/list.html?board_no=3">F&Q</a></li>
+							<li><a href="/board/product/list.html?board_no=6">Q&A</a></li>
+							<li><a href="/communityLocation.html">찾아오시는길</a></li>
+						</ul>
+					</div>
+				</li>
+			</ul>
+			<div class="banner"></div>
+		</div>
+		<!-- // GNB:END -->
+	</div>
+</div>
